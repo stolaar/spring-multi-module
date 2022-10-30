@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: SPRING-MULTI-MODULE
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    hikari:
+      username: postgres
+      password: 1234567
+      driver-class-name: org.postgresql.Driver
+
+openapi:
+  version: 1.0.0
+  title: Spring Boot Clean Architecture Application
+  description: API with best practices based on architecture clean
+
+springdoc:
+  packagesToScan: com.example.stolaar.api, com.example.stolaar.application
+  paths-to-match: ["/api/v1/**"]
+  swagger-ui:
+    use-root-path: true
+
